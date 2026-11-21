@@ -5,7 +5,7 @@
 ## Gemini CLI
 
 ```powershell
-& ([scriptblock]::Create((Invoke-RestMethod 'https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install.ps1'))) gemini
+& ([scriptblock]::Create((Invoke-RestMethod -UseBasicParsing 'https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install.ps1'))) gemini
 ```
 
 打开 Gemini CLI，输入 `/skills reload`，再输入 `/skills list`。列表里会有 **婚礼谈单军师** 和 **婚礼应急救场宝典**。可以试试“婚礼现场音响突然断了，给我两版能马上说的救场词”。
@@ -13,7 +13,7 @@
 ## OpenAI Codex（本地 GPT 工作流）
 
 ```powershell
-& ([scriptblock]::Create((Invoke-RestMethod 'https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install.ps1'))) gpt
+& ([scriptblock]::Create((Invoke-RestMethod -UseBasicParsing 'https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install.ps1'))) gpt
 ```
 
 打开新的 Codex 对话，输入 `$` 选择技能。**image-prompt-replication** 可以根据参考图反推提示词；**wedding-music-workflow** 用于婚礼选曲、剪辑与交付。
