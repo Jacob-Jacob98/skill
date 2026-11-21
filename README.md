@@ -1,19 +1,35 @@
 # 一生主持人 · 客户技能安装
 
-在 Windows 上打开 **PowerShell**，按你使用的客户端复制一条命令，粘贴后按回车。需要能访问 GitHub，并已安装对应的客户端。
+在 Windows 上打开你使用的本地客户端，复制下方对应的安装指令发到对话框。安装时需要联网访问 GitHub。
 
 ## Gemini CLI
 
+在 Gemini CLI 对话框里发送这句话：
+
+```text
+请在我的 Windows 电脑上下载并运行 https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install-gemini.ps1，安装婚礼谈单军师和婚礼应急救场宝典。完成后告诉我安装结果。
+```
+
+也可以直接在 PowerShell 里运行：
+
 ```powershell
-& ([scriptblock]::Create((Invoke-RestMethod -UseBasicParsing 'https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install.ps1'))) gemini
+& ([scriptblock]::Create((Invoke-RestMethod -UseBasicParsing 'https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install-gemini.ps1')))
 ```
 
 打开 Gemini CLI，输入 `/skills reload`，再输入 `/skills list`。列表里会有 **婚礼谈单军师** 和 **婚礼应急救场宝典**。可以试试“婚礼现场音响突然断了，给我两版能马上说的救场词”。
 
 ## OpenAI Codex（本地 GPT 工作流）
 
+在 Codex 对话框里发送这句话：
+
+```text
+请在我的 Windows 电脑上下载并运行 https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install-gpt.ps1，安装图像复刻提示词和婚礼歌单工作流，并检查音乐运行环境。完成后告诉我安装结果。
+```
+
+也可以直接在 PowerShell 里运行：
+
 ```powershell
-& ([scriptblock]::Create((Invoke-RestMethod -UseBasicParsing 'https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install.ps1'))) gpt
+& ([scriptblock]::Create((Invoke-RestMethod -UseBasicParsing 'https://raw.githubusercontent.com/Jacob-Jacob98/skill/main/install-gpt.ps1')))
 ```
 
 打开新的 Codex 对话，输入 `$` 选择技能。**image-prompt-replication** 可以根据参考图反推提示词；**wedding-music-workflow** 用于婚礼选曲、剪辑与交付。
