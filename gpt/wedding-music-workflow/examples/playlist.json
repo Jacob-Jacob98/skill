@@ -1,0 +1,24 @@
+{
+  "tracks": [
+    {
+      "index": 1,
+      "stage": "主持人开场",
+      "title": "River Flows in You",
+      "artists": ["Yiruma"],
+      "version": "",
+      "start": 0,
+      "confirmed": false,
+      "separate": false
+    },
+    {
+      "index": 2,
+      "stage": "新郎入场",
+      "title": "Something Just Like This",
+      "artists": ["The Chainsmokers", "Coldplay"],
+      "version": "",
+      "start": "01:02",
+      "confirmed": false,
+      "separate": false
+    }
+  ]
+}

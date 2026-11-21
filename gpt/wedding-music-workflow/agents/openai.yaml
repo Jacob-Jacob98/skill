@@ -1,0 +1,6 @@
+interface:
+  display_name: "婚礼歌单工作流"
+  short_description: "按歌单搜索选版、逐首下载、裁剪淡入与伴奏分离，交付编号 MP3"
+  default_prompt: "使用 $wedding-music-workflow 处理我的歌单；版本不确定时每首给我可点击选项，按环节命名并只交付 MP3。"
+policy:
+  allow_implicit_invocation: true
