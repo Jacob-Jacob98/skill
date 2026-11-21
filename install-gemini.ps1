@@ -38,7 +38,16 @@ try {
             $stage = Join-Path (Split-Path $skillRoot) ".wedding-skills-$id"
             try {
                 Copy-Item -LiteralPath $pkg.FullName -Destination $stage -Recurse
-                [IO.Directory]::Move($stage, $dest)
+                # On Windows a scanner can briefly lock newly copied files.
+                for ($attempt = 1; ; $attempt++) {
+                    try {
+                        [IO.Directory]::Move($stage, $dest)
+                        break
+                    } catch [IO.IOException], [UnauthorizedAccessException] {
+                        if ($attempt -ge 10 -or (Test-Path -LiteralPath $dest)) { throw }
+                        Start-Sleep -Milliseconds (200 * $attempt)
+                    }
+                }
             } finally {
                 if ((Test-Path -LiteralPath $stage) -and ([IO.Path]::GetFullPath($stage) -eq (Join-Path (Split-Path $skillRoot) ".wedding-skills-$id"))) {
                     Remove-Item -LiteralPath $stage -Recurse -Force
